@@ -25,9 +25,11 @@ class ProductListScreen extends StatelessWidget {
         initialData: productBloc.getAll(),
         stream: productBloc.getStream,
         builder: (context, snapshot) {
-          return buildProductListItem(snapshot);
-
-
+          return snapshot.data.lenght > 0
+              ? buildProductListItem(snapshot)
+              : Center(
+                  child: Text("Yükleniyor"),
+                );
         });
   }
 
