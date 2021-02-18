@@ -1,7 +1,7 @@
 import 'package:bloc_sample/models/product.dart';
 
 class ProductService{
-  static List<Product> products ;
+  static List<Product> products = List<Product>() ;
 
   static ProductService _singleton = ProductService._internal();
 
